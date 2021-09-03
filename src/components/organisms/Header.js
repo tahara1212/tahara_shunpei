@@ -8,7 +8,7 @@ export const Header = () => {
                      <SLogo>
                             <h1>
                                    {/* <i class="fab fa-github"></i> */}
-                                   Ts
+                                   sT
                             </h1>
                      </SLogo>
                      <SNav>

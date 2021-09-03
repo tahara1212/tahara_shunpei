@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-// import { css, keyframes } from "@emotion/react";
+import { css, keyframes } from "@emotion/react";
 import bg from "../images/bg.jpg";
 import { motion } from "framer-motion";
 
@@ -11,7 +11,11 @@ export const Main = () => {
       <SMainBg
         animate={AnimateDefault}
         transition={TransitionDefault}
-      ></SMainBg>
+        >
+        </SMainBg>
+        <SVG width="720" height="720">
+                     <SCircle cx="360" cy="360" r="260" fill-opacity="0" />
+              </SVG>
       </SMain>
     </SContainer>
   );
@@ -57,16 +61,23 @@ const SMainBg = styled(motion.div)`
     overflow: hidden;
 `
 
-// const SContainerStyle = styled.div`
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100vh;
-//   background-color: violet;
-//   background-image: url(${bg});
-//   background-position: center;
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   z-index: 1;
-// `;
+const SVG = styled.svg`
+       transform: rotate(-90deg);
+       position: absolute;
+       background-color: transparent;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       z-index: 1;
+`
+const KC = keyframes`
+  0% { stroke-dasharray: 0 2261; }
+  99.9%,to { stroke-dasharray: 2261 2261; }
+`
+const SCircle = styled.circle`
+    fill: transparent;
+    stroke: black;
+    stroke-width: 0.5;
+    animation: ${KC} 10s infinite;
+`
+
