@@ -6,15 +6,19 @@ export const Header = () => {
        return (
               <SHeader>
                      <SLogo>
-                            <h1>logo</h1>
+                            <h1>
+                                   {/* <i class="fab fa-github"></i> */}
+                                   Ts
+                            </h1>
                      </SLogo>
                      <SNav>
                             <SUl>
-                                   <li>ABOUT</li>
-                                   <li>WORKS</li>
-                                   <li>WORKS</li>
-                                   <li>WORKS</li>
-                                   <li>CONTACT</li>
+                                   <SLi>About</SLi>
+                                   <SLi>Profile</SLi>
+                                   <SLi>Works</SLi>
+                                   <SLi>Skils</SLi>
+                                   <SLi>Blog</SLi>
+                                   <SLi>Contact</SLi>
                             </SUl>
                      </SNav>
               </SHeader>
@@ -37,6 +41,7 @@ const SLogo = styled.div`
     margin-right: 10px;
     padding: 0;
     height: 100%;
+    opacity: 0.8;
 `
 const SNav = styled.nav`
        width: 50%;
@@ -49,5 +54,14 @@ const SUl = styled.ul`
     display: flex;
     list-style: none;
     justify-content: space-around;
+`
 
+const SLi = styled.li`
+     cursor: pointer;
+     height: 50px;
+     transition: all 0.5s;
+     &:hover {
+            border-bottom: 1px solid black;
+            font-size: 20px;
+     }
 `

@@ -5,17 +5,15 @@ import bg from "../images/bg.jpg";
 import { motion } from "framer-motion";
 
 export const Main = () => {
-  console.log("aa")
   return (
-    <BG1>
-      <BG2>
-      <SContainer
+    <SContainer>
+      <SMain>
+      <SMainBg
         animate={AnimateDefault}
         transition={TransitionDefault}
-      ></SContainer>
-      </BG2>
-      
-    </BG1>
+      ></SMainBg>
+      </SMain>
+    </SContainer>
   );
 };
 
@@ -26,35 +24,36 @@ const AnimateDefault = {
 const TransitionDefault = {
   from: 1.5,
   repeat: Infinity,
-  duration: 8,
+  duration: 10,
+  ease: "easeOut",
 };
 
-const BG1 = styled.div`
+const SContainer = styled.div`
     width: 100%;
-    height: 100vh;
-    background-color: black;
+    /* height: 100vh; */
+    /* background-color: black; */
     display: flex;
     justify-content: center; /*左右中央揃え*/
     align-items: center;     /*上下中央揃え*/
 `
 
-const BG2 = styled.div`
+const SMain = styled.div`
     width: calc(100% - 80px);
-    height: calc(100vh - 90px);
+    height: calc(95vh - 90px);
     overflow: hidden;
-
+    background-color: blue;
 `
 
-const SContainer = styled(motion.div)`
-    width: calc(100% - 80px);
-    height: calc(100vh - 90px);
-    background-color: white;
+const SMainBg = styled(motion.div)`
+    width: calc(100%);
+    height: calc(95vh - 90px);
+    /* background-color: white; */
     margin: 0 auto;
     background-image: url(${bg});
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* transform: scale(2.5); */
+    /* transform: scale(1); */
     overflow: hidden;
 `
 
