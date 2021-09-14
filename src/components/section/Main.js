@@ -44,7 +44,7 @@ const SContainer = styled.div`
   display: flex;
   justify-content: center; /*左右中央揃え*/
   align-items: center; /*上下中央揃え*/
-  margin-bottom: 20vh;
+  margin-bottom: 10vh;
 `;
 
 const SMain = styled.div`

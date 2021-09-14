@@ -7,8 +7,8 @@ export const Title = (props) => {
   console.log(title);
   return (
     <>
-      <SVG width="720" height="720">
-        <SCircle cx="360" cy="360" r="160" fill-opacity="0" />
+      <SVG width="360" height="360">
+        <SCircle cx="180" cy="180" r="160" fill-opacity="0" />
       </SVG>
       <SMainText>{title}</SMainText>
     </>

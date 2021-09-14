@@ -20,6 +20,12 @@ export const About = () => {
     <SContainer>
       <SAbout ref={ref}>
         {inView && setTitle("About")}
+
+        <SAboutImageBox>
+          <Fade duration={3000}>
+            <SAboutImage></SAboutImage>
+          </Fade>
+        </SAboutImageBox>
         <SAboutTextBox>
           <SAboutText>
             <Fade right cascade duration={4000}>
@@ -28,25 +34,10 @@ export const About = () => {
             <Fade right cascade duration={3000}>
               1991年兵庫県生まれ
               <br />
-              13才で初めてマークアップ言語に触れ、HPを作成。
-              <br />
-              その一年後にブログを開設し4年間運用する。
-              <br />
-              DTMでの音楽制作に励み、夢を見て上京。
-              4年で結果が出ず、22才で飲食業界に就職。
-              <br />
-              26才でIT業界へ転職し、クラウドサーバの構築や、
-              バックエンド開発等の実務経験を積む。
-              <br />
-              現在はフロントエンドエンジニアとして都内で活動中。
+              フロントエンドエンジニア
             </Fade>
           </SAboutText>
         </SAboutTextBox>
-        <SAboutImageBox>
-          <Fade duration={3000}>
-            <SAboutImage></SAboutImage>
-          </Fade>
-        </SAboutImageBox>
       </SAbout>
     </SContainer>
   );
@@ -60,7 +51,7 @@ const SContainer = styled.div`
   background-color: whitesmoke;
   margin: 0 auto;
   position: relative;
-  margin-bottom: 20vh;
+  margin-bottom: 10vh;
 `;
 
 const SAbout = styled.div`
@@ -74,6 +65,7 @@ const SAbout = styled.div`
 
 const SAboutTextBox = styled.div`
   width: 50%;
+  position: relative;
 `;
 
 const SAboutTitle = styled.span`
@@ -85,12 +77,12 @@ const SAboutTitle = styled.span`
 const SAboutText = styled.p`
   font-size: 18px;
   overflow-wrap: break-word;
-  width: 30%;
+  width: 60%;
   font-family: "KleeOne", serif;
   position: absolute;
   top: 50%;
-  left: 20%;
-  transform: translate(-50%, -50%);
+  left: 50%;
+  transform: translate(-30%, -50%);
 `;
 
 const SAboutImageBox = styled.div`
@@ -105,4 +97,5 @@ const SAboutImage = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 5px;
 `;

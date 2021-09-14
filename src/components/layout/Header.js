@@ -16,7 +16,6 @@ export const Header = () => {
           <SLi>History</SLi>
           <SLi>Works</SLi>
           <SLi>Skils</SLi>
-          <SLi>Blog</SLi>
           <SLi>Contact</SLi>
         </SUl>
       </SNav>
@@ -33,7 +32,8 @@ const SHeader = styled.header`
   font-size: 1.6rem;
   pointer-events: auto;
   position: fixed;
-  z-index: 2;
+  background-color: whitesmoke;
+  z-index: 10;
 `;
 const SLogo = styled.div`
   position: relative;

@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Global, css } from "@emotion/react";
-import App from "./App";
 import Besley from "./fonts/Besley-Italic.ttf";
 import Allison from "./fonts/Allison-Regular.ttf";
 import KleeOne from "./fonts/ShipporiMincho-Regular.ttf";
+
+import App from "./App";
 
 const GlobalStyles = css`
   @font-face {
@@ -29,10 +30,10 @@ const GlobalStyles = css`
     margin: 0;
     padding: 0;
     font-family: "Besley", serif;
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
   }
   body {
-    /* background-color: whitesmoke; */
+    background-color: whitesmoke;
   }
   p,
   h1 {
